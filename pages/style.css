@@ -241,13 +241,38 @@ section {
 }
 
 .skill-tag {
+    position: relative;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
+    cursor: pointer;
 }
+
+/* hover percentage */
+.skill-tag::after {
+    content: attr(data-percent);
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #065f46; /* dark green */
+    color: #ecfdf5;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+}
+
+.skill-tag:hover::after {
+    opacity: 1;
+}
+
 
 /* Projects Section */
 #projects {
