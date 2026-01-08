@@ -258,7 +258,7 @@ section {
     top: -38px;
     left: 50%;
     transform: translateX(-50%);
-    background: #065f46; /* dark green */
+    background: #065f46;
     color: #ecfdf5;
     padding: 5px 10px;
     border-radius: 8px;
@@ -465,7 +465,46 @@ footer {
     }
 
     .about-pic {
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 350px;
+    }
+}
+
+/* Mobile Specific Design (Phones - 480px and below) */
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1rem;
+    }
+
+    .profile-pic {
+        width: 280px; 
+        height: 280px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .about-content {
+        padding: 0 20px;
+    }
+
+    .about-pic {
+        width: 250px; 
+        height: auto; 
+    }
+
+    .about-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
 }
