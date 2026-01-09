@@ -374,57 +374,27 @@ section {
     transform: scale(1.1);
 }
 
-/* Section Container */
-.projects-section {
-    padding: 40px;
-    max-width: 1100px;
-    margin: 0 auto; /* Center align the whole section */
+.horizontal-card {
+    display: flex; /* Side-by-side vara vaikkum */
+    flex-direction: row;
+    width: 100%; /* Full width eduthukkum */
+    max-width: 800px; /* Card romba perusa pogama irukka */
+    margin: 0 auto; /* Center alignment */
+    align-items: center;
 }
 
-/* Thani Heading (Life Skills Projects) */
-.section-title {
-    color: #1a735c;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px; /* Heading-kku kila gap kodukka */
+.horizontal-card .project-image {
+    flex: 0 0 40%; /* Image 40% space edukkum */
+    height: 100%;
+    min-height: 250px;
 }
 
-/* Card Wrapper */
-.projects-wrapper {
-    display: flex;
-    gap: 20px;
+.horizontal-card .project-content {
+    flex: 1; /* Content meethi 60% space edukkum */
+    padding: 2rem;
+    text-align: left;
 }
 
-/* Individual Card */
-.card {
-    width: 330px;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-}
-
-.card-image img {
-    width: 100%;
-    display: block;
-}
-
-.card-body {
-    padding: 20px;
-}
-
-/* Project Heading (7 Star AC) */
-.card-heading {
-    color: #1a735c;
-    font-size: 20px;
-    margin: 0 0 10px 0;
-}
-
-.card-text {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.5;
-}
 
 /* Tag & Link */
 .status-tag {
@@ -613,4 +583,14 @@ footer {
             font-size: 1.4rem;
             margin-bottom: 1.5rem;
     }
+
+/* Mobile-ukku thirumba vertical-ah matha */
+@media (max-width: 768px) {
+    .horizontal-card {
+        flex-direction: column;
+    }
+    .horizontal-card .project-image {
+        width: 100%;
+    }
+}
 }
