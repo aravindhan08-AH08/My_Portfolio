@@ -1,289 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://api.iconify.design/material-symbols:contacts-product.svg"
-    />
-    <title>Aravindhan M V - Portfolio</title>
-    <link rel="stylesheet" href="./pages/style.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="nav-container">
-        <div class="logo">Aravindhan M V</div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
 
-    <section id="home">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Hi, I'm Aravindhan M V</h1>
-          <h2>Aspiring Full Stack Developer</h2>
-          <p>
-            I'm passionate about building clean and functional web applications.
-            I work with HTML, CSS, JavaScript, Python, and FastAPI, and I enjoy
-            learning by building real-world projects to grow my career in tech.
-          </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="https://api.iconify.design/material-symbols:contacts-product.svg" />
+  <title>Aravindhan M V - Portfolio</title>
+  <link rel="stylesheet" href="./pages/style.css" />
+</head>
+
+<body>
+  <div class="bg-animation" id="bgAnimation"></div>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Aravindhan M V</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hi, I'm Aravindhan M V</h1>
+        <h2>I am <span class="typing-text"></span></h2>
+        <p>
+          I'm passionate about building clean and functional web applications.
+          I work with HTML, CSS, JavaScript, Python, and FastAPI, and I enjoy
+          learning by building real-world projects to grow my career in tech.
+        </p>
+        <div class="cta-buttons">
           <a href="#contact" class="cta-button">Contact Me</a>
-        </div>
-        <div class="hero-image">
-          <img
-            src="./assets/Aravindhan_photo.jpeg"
-            alt="Profile Picture"
-            class="profile-pic"
-          />
+          <a href="./assets/Aravindhan_Resume.pdf" target="_blank" class="cta-button secondary-cta"
+            download="Aravindhan_Resume_CV">Download Resume</a>
         </div>
       </div>
-    </section>
+      <div class="hero-image">
+        <img src="./assets/Aravindhan_photo.jpeg" alt="Profile Picture" class="profile-pic" />
+      </div>
+    </div>
+  </section>
 
-    <section id="about">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-photo">
-          <img
-            src="./assets/Aravindh_passport.jpeg"
-            alt="Aravindhan M V"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-text">
-          <p>
-            My name is Aravindhan M V, I am from Paramakudi in Ramanathapuram. I
-            have completed my 12th standard in 2025. I am interested in starting
-            my career in the IT industry. I have a strong interest in working on
-            real-world projects and gaining practical experience in web
-            development.
-          </p>
-          <br />
-          <p>
-            I have built a user-friendly website as part of my learning journey.
-            I believe in learning something new every day and continuously
-            improving my skills. I am improving my English communication skills
-            and I enjoy working as part of a team to learn and grow together.
-          </p>
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <div class="about-photo">
+        <img src="./assets/Aravindh_passport.jpeg" alt="Aravindhan M V" class="about-pic" />
+      </div>
+      <div class="about-text">
+        <p>
+          My name is Aravindhan M V, I am from Paramakudi in Ramanathapuram. I
+          have completed my 12th standard in 2025. I am interested in starting
+          my career in the IT industry. I have a strong interest in working on
+          real-world projects and gaining practical experience in web
+          development.
+        </p>
+        <br />
+        <p>
+          I have built a user-friendly website as part of my learning journey.
+          I believe in learning something new every day and continuously
+          improving my skills. I am improving my English communication skills
+          and I enjoy working as part of a team to learn and grow together.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Frontend Development</h3>
+        <div class="skill-items">
+          <span class="skill-tag" data-percent="50%">HTML</span>
+          <span class="skill-tag" data-percent="50%">CSS</span>
+          <span class="skill-tag" data-percent="30%">JavaScript</span>
         </div>
       </div>
-    </section>
-
-    <section id="skills">
-      <h2 class="section-title">My Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Frontend Development</h3>
-          <div class="skill-items">
-            <span class="skill-tag" data-percent="50%">HTML</span>
-            <span class="skill-tag" data-percent="50%">CSS</span>
-            <span class="skill-tag" data-percent="30">JavaScript</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Backend Development</h3>
-          <div class="skill-items">
-            <span class="skill-tag" data-percent="65%">Python</span>
-            <span class="skill-tag" data-percent="50%">FastAPI</span>
-            <span class="skill-tag" data-percent="40%">PostgreSQL</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Tools</h3>
-          <div class="skill-items">
-            <span class="skill-tag" data-percent="45%">GitHub</span>
-            <span class="skill-tag" data-percent="50%">VS Code</span>
-            <span class="skill-tag" data-percent="50%">Figma</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Other Skills</h3>
-          <div class="skill-items">
-            <span class="skill-tag" data-percent="60%">English Communication</span>
-            <span class="skill-tag" data-percent="50%">Video Editing</span>
-            <span class="skill-tag" data-percent="60%">Photography</span>
-            <span class="skill-tag" data-percent="50%">Presentation</span>
-            <span class="skill-tag" data-percent="65%">Teamwork</span>
-          </div>
+      <div class="skill-card">
+        <h3>Backend Development</h3>
+        <div class="skill-items">
+          <span class="skill-tag" data-percent="65%">Python</span>
+          <span class="skill-tag" data-percent="50%">FastAPI</span>
+          <span class="skill-tag" data-percent="40%">PostgreSQL</span>
         </div>
       </div>
-    </section>
+      <div class="skill-card">
+        <h3>Tools</h3>
+        <div class="skill-items">
+          <span class="skill-tag" data-percent="45%">GitHub</span>
+          <span class="skill-tag" data-percent="50%">VS Code</span>
+          <span class="skill-tag" data-percent="50%">Figma</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Other Skills</h3>
+        <div class="skill-items">
+          <span class="skill-tag" data-percent="60%">English Communication</span>
+          <span class="skill-tag" data-percent="50%">Video Editing</span>
+          <span class="skill-tag" data-percent="60%">Photography</span>
+          <span class="skill-tag" data-percent="50%">Presentation</span>
+          <span class="skill-tag" data-percent="65%">Teamwork</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="projects">
-      <h2 class="section-title">My Projects</h2>
-      <h3 class="tech-projects-title">Tech Projects</h3>
-      <div class="projects-grid">
-        <div class="project-card">
+  <section id="hobbies">
+    <h2 class="section-title">Hobbies & Interests</h2>
+    <div class="hobby-grid">
+      <div class="hobby-card">
+        <div class="hobby-icon">🏏</div>
+        <h3>Cricket</h3>
+        <p>Playing & Watching</p>
+      </div>
+      <div class="hobby-card">
+        <div class="hobby-icon">🎵</div>
+        <h3>Music</h3>
+        <p>Listening to Melody Songs</p>
+      </div>
+      <div class="hobby-card">
+        <div class="hobby-icon">✈️</div>
+        <h3>Travel</h3>
+        <p>Exploring New Places</p>
+      </div>
+      <div class="hobby-card">
+        <div class="hobby-icon">💻</div>
+        <h3>Real-Time Projects</h3>
+        <p>Building Real World Apps</p>
+      </div>
+      <div class="hobby-card">
+        <div class="hobby-icon">🌐</div>
+        <h3>Open Source</h3>
+        <p>Exploring & Learning</p>
+      </div>
+      <div class="hobby-card">
+        <div class="hobby-icon">📚</div>
+        <h3>Self Learning</h3>
+        <p>Exploring New Technologies</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-hire-me">
+    <h2 class="section-title">Why Hire Me?</h2>
+    <div class="why-hire-grid">
+      <div class="why-card">
+        <div class="icon-box">🚀</div>
+        <h3>Quick Learner</h3>
+      </div>
+      <div class="why-card">
+        <div class="icon-box">💡</div>
+        <h3>Problem Solver</h3>
+      </div>
+      <div class="why-card">
+        <div class="icon-box">🤝</div>
+        <h3>Team Player</h3>
+      </div>
+      <div class="why-card">
+        <div class="icon-box">🔥</div>
+        <h3>Passionate</h3>
+      </div>
+      <div class="why-card">
+        <div class="icon-box">✨</div>
+        <h3>Positive Personality</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">My Projects</h2>
+    <h3 class="tech-projects-title">Tech Projects</h3>
+    <div class="projects-grid">
+      <div class="project-card">
         <div class="project-image">
-        <img src="./assets/LEO_Resatarant.png" alt="Project Screenshot">
+          <img src="./assets/LEO_Resatarant.png" alt="Project Screenshot">
         </div>
         <div class="project-content">
-        <h3>LEO Restaurant</h3>
-        <p>
-          This is a static webpage for a restaurant menu. This project took
-          me 50 days to complete. I learnt Small Business Website Design
-          from Coursera.
-        </p>
-        <div class="project-tech">
-          <span class="tech-tag">HTML</span>
-          <span class="tech-tag">CSS</span>
-        </div>
-        <div class="project-links">
-          <a
-          href="https://aravindhan08-ah08.github.io/LEO_static/"
-          class="project-link"
-          >View Demo →</a
-          >
-          <a
-          href="https://github.com/aravindhan08-AH08/LEO_static"
-          class="project-link"
-          >GitHub →</a
-          >
-            </div>
-            </div>
-        </div>
-        <div class="project-card">
-          <div class="project-image">
-        <img src="./assets/Bachelor_life_UI.png" alt="Project Screenshot">
-        </div>
-          <div class="project-content">
-            <h3>Bachelor Life</h3>
-            <p>
-              This is a full stack web application for managing bachelor life
-              expenses and tasks. This is my first full stack web application
-              project. While building this project, I found the design part
-              challenging.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">FastAPI</span>
-            </div>
-            <div class="project-links">
-              <a
-                href="https://aravindhan08-ah08.github.io/Static_webpage/"
-                class="project-link"
-                >View Demo →</a
-              >
-              <a
-                href="https://github.com/aravindhan08-AH08/Static_webpage"
-                class="project-link"
-                >GitHub →</a
-              >
-            </div>
+          <h3>LEO Restaurant</h3>
+          <p>
+            This is a static webpage for a restaurant menu. This project took
+            me 50 days to complete. I learnt Small Business Website Design
+            from Coursera.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
           </div>
-        </div>
-        <div class="project-card">
-          <div class="project-image">
-        <img src="./assets/Calculator_UI.png" alt="Project Screenshot">
-        </div>
-          <div class="project-content">
-            <h3>Calculator</h3>
-            <p>
-              This is a calculator web application project. This project is
-              built using HTML CSS and Java Script. This is my first Java Script
-              project. The calculator can perform basic arithmetic operations
-              like addition, subtraction, multiplication and division.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">Java Script</span>
-            </div>
-            <div class="project-links">
-              <a
-                href="https://aravindhan08-ah08.github.io/Calculator/"
-                class="project-link"
-                >View Demo →</a
-              >
-              <a
-                href="https://github.com/aravindhan08-AH08/Calculator"
-                class="project-link"
-                >GitHub →</a
-              >
-            </div>
+          <div class="project-links">
+            <a href="https://aravindhan08-ah08.github.io/LEO_static/" class="project-link">View Demo →</a>
+            <a href="https://github.com/aravindhan08-AH08/LEO_static" class="project-link">GitHub →</a>
           </div>
-        </div>
-        </div> 
-
-        <div class="life-skills-section" style="margin-top: 50px;">
-          <h3 class="tech-projects-title">Life Skills Projects</h3> 
-          <div class="project-card horizontal-card">
-            <div class="project-image">
-              <img src="./assets/Grp_Photo.jpeg" alt="7 Star AC Project" />
-          </div>
-          <div class="project-content">
-            <h3>7 Star AC</h3>
-            <p>A product building challenge was conducted. We participated in it and made a small AC.
-              The silver coil inside the AC becomes cool and produces cool air.
-              We made the AC using a silver coil. Our team won 4th place. From this product building 
-              challenge I learnt we can achieve anything with teamwork.</p>
-            <div class="project-tech">
-                <span class="tech-tag">Team Work</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-          </div>
-      </div>
-
-
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2 class="section-title">Contact Me</h2>
-      <div class="contact-content">
-        <p>
-          I'm a Full Stack Developer eager to work on real-world projects and
-          grow with a passionate tech team.
-        </p>
-        <p>Available for Fresher Role / Internships. Let's connect!</p>
-        <div class="contact-info">
-          <div class="contact-item">
-            <a
-              href="mailto:aravindhanmv2008@gmail.com?subject=Regarding%20Fresher%20Developer%20Opportunity&body=Hi%20Aravindhan,%0A%0AI%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you.%0A%0AThanks"
-              >📧 aravindhanmv2008@gmail.com</a
-            >
-          </div>
-          <div class="contact-item">
-            <a href="tel:+919486429127">📱 +91 94864 29127</a>
-          </div>
-        </div>
-        <div class="social-links">
-          <a
-            href="https://www.linkedin.com/in/aravindhan-m-v-914170382/"
-            target="_blank"
-            class="social-link"
-            >LinkedIn</a
-          >
-          <a
-            href="https://github.com/aravindhan08-AH08"
-            target="_blank"
-            class="social-link"
-            >GitHub</a
-          >
-          <a
-            href="https://wa.me/919486429127?text=Hi%20I'm%20Aravindhan.%0A%0A<NAME>%2C%20I%20visited%20your%20portfolio."
-            target="_blank"
-            class="social-link"
-            >Whatsapp</a
-          >
         </div>
       </div>
-    </section>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/Bachelor_life_UI.png" alt="Project Screenshot">
+        </div>
+        <div class="project-content">
+          <h3>Bachelor Life</h3>
+          <p>
+            This is a full stack web application for managing bachelor life
+            expenses and tasks. This is my first full stack web application
+            project. While building this project, I found the design part
+            challenging.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavsScript</span>
+            <span class="tech-tag">FastAPI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://aravindhan08-ah08.github.io/Static_webpage/" class="project-link">View Demo →</a>
+            <a href="https://github.com/aravindhan08-AH08/Static_webpage" class="project-link">GitHub →</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/Calculator_UI.png" alt="Project Screenshot">
+        </div>
+        <div class="project-content">
+          <h3>Calculator</h3>
+          <p>
+            This is a calculator web application project. This project is
+            built using HTML CSS and Java Script. This is my first Java Script
+            project. The calculator can perform basic arithmetic operations
+            like addition, subtraction, multiplication and division.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">Java Script</span>
+          </div>
+          <div class="project-links">
+            <a href="https://aravindhan08-ah08.github.io/Calculator/" class="project-link">View Demo →</a>
+            <a href="https://github.com/aravindhan08-AH08/Calculator" class="project-link">GitHub →</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <footer>
-      <p>Actively learning • Daily practice • Real projects</p>
-      <p>&copy; 2025 Aravindhan M V. Built with using HTML & CSS</p>
-    </footer>
-  </body>
+    <div class="life-skills-section" style="margin-top: 50px;">
+      <h3 class="tech-projects-title">Life Skills Projects</h3>
+      <div class="project-card horizontal-card">
+        <div class="project-image">
+          <img src="./assets/Grp_Photo.jpeg" alt="7 Star AC Project" />
+        </div>
+        <div class="project-content">
+          <h3>7 Star AC</h3>
+          <p>A product building challenge was conducted. We participated in it and made a small AC.
+            The silver coil inside the AC becomes cool and produces cool air.
+            We made the AC using a silver coil. Our team won 4th place. From this product building
+            challenge I learnt we can achieve anything with teamwork.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Team Work</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </div>
+
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-content">
+      <p>
+        I'm a Full Stack Developer eager to work on real-world projects and
+        grow with a passionate tech team.
+      </p>
+      <p>Available for Fresher Role / Internships. Let's connect!</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <a
+            href="mailto:aravindhanmv2008@gmail.com?subject=Regarding%20Fresher%20Developer%20Opportunity&body=Hi%20Aravindhan,%0A%0AI%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you.%0A%0AThanks">📧
+            aravindhanmv2008@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <a href="tel:+919486429127">📱 +91 94864 29127</a>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/aravindhan-m-v-914170382/" target="_blank" class="social-link">LinkedIn</a>
+        <a href="https://github.com/aravindhan08-AH08" target="_blank" class="social-link">GitHub</a>
+        <a href="https://wa.me/919486429127?text=Hii%20Aravindhan%0AMy%20(Name)%20I'm%20visited%20your%20portfolio"
+          target="_blank" class="social-link">Whatsapp</a>
+      </div>
+    </div>
+  </section>
+
+  <button id="backToTop" title="Go to top">↑</button>
+
+  <footer>
+    <div class="footer-content">
+      <p class="footer-motto">"Actively learning • Daily practice • Real projects"</p>
+      <p class="copyright">&copy; 2026 Aravindhan M V. Designed & Built with ❤️ using HTML, CSS & JS(JavaScript).</p>
+    </div>
+  </footer>
+
+  <script>
+    // Typewriter Effect
+    const textElement = document.querySelector(".typing-text");
+    const texts = ["Full Stack Developer", "Problem Solver", "Application Builder"];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+      const currentText = texts[textIndex];
+      if (isDeleting) {
+        textElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        textElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let typeSpeed = isDeleting ? 100 : 200;
+
+      if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        typeSpeed = 2000; // Pause at end
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        typeSpeed = 500;
+      }
+
+      setTimeout(type, typeSpeed);
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+
+    // Back to Top Button
+    const backToTopButton = document.getElementById("backToTop");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+
 </html>

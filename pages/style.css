@@ -376,28 +376,34 @@ section {
 
 /* Life Skill Card - Horizontal Layout */
 .horizontal-card {
-    display: flex; 
-    flex-direction: row; /* Image left, Content right */
-    width: 100%; 
-    max-width: 900px; /* Card size konjam adjust panniruken */
-    margin: 0 auto; 
-    align-items: stretch; /* Image and Content ore height-la irukka */
+    display: flex;
+    flex-direction: row;
+    /* Image left, Content right */
+    width: 100%;
+    max-width: 900px;
+    /* Card size konjam adjust panniruken */
+    margin: 0 auto;
+    align-items: stretch;
+    /* Image and Content ore height-la irukka */
     overflow: hidden;
     background: var(--card-bg);
 }
 
 .horizontal-card .project-image {
-    flex: 0 0 40%; /* Image-ku 40% space */
-    height: auto; 
+    flex: 0 0 40%;
+    /* Image-ku 40% space */
+    height: auto;
     min-height: 250px;
 }
 
 .horizontal-card .project-content {
-    flex: 1; /* Content-ku balance space */
+    flex: 1;
+    /* Content-ku balance space */
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Content-ai center-la veikkum */
+    justify-content: center;
+    /* Content-ai center-la veikkum */
     text-align: left;
 }
 
@@ -429,7 +435,7 @@ section {
     text-align: center;
 }
 
-.contact-content > p {
+.contact-content>p {
     color: var(--text-light);
     font-size: 1.1rem;
 }
@@ -491,15 +497,99 @@ footer {
     background: var(--dark);
     color: white;
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-motto {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--light);
+    font-style: italic;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Animations */
+/* Background Animation */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.15;
+    /* Subtlest transparency */
+}
+
+.floating-symbol {
+    position: absolute;
+    color: var(--primary);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    white-space: nowrap;
+    animation: floatAround linear infinite;
+}
+
+@keyframes floatAround {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(100px, -100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -519,7 +609,7 @@ footer {
     .hero-text h2 {
         font-size: 1.2rem;
     }
-    
+
     .profile-pic {
         width: 380px;
         height: 380px;
@@ -528,7 +618,7 @@ footer {
     .section-title {
         font-size: 2rem;
     }
-    
+
     /* About Section Mobile */
     .about-content {
         flex-direction: column;
@@ -555,16 +645,16 @@ footer {
     .hero-text h1 {
         font-size: 1.8rem;
     }
-    
+
     .hero-text h2 {
         font-size: 1rem;
     }
 
     .profile-pic {
-        width: 280px; 
+        width: 280px;
         height: 280px;
     }
-    
+
     .section-title {
         font-size: 1.6rem;
     }
@@ -574,8 +664,8 @@ footer {
     }
 
     .about-pic {
-        width: 250px; 
-        height: auto; 
+        width: 250px;
+        height: auto;
     }
 
     .about-text {
@@ -587,9 +677,10 @@ footer {
 
 @media (max-width: 768px) {
     .tech-projects-title {
-            font-size: 1.4rem;
-            margin-bottom: 1.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
     }
+
     .projects-grid {
         grid-template-columns: auto-fit;
     }
@@ -599,8 +690,195 @@ footer {
     .horizontal-card {
         flex-direction: column;
     }
+
     .horizontal-card .project-image {
         flex: 0 0 100%;
         height: 200px;
     }
+}
+
+/* Typewriter Effect */
+.typing-text {
+    color: var(--accent);
+    font-weight: bold;
+    position: relative;
+}
+
+.typing-text::after {
+    content: "|";
+    position: absolute;
+    right: -8px;
+    animation: blink 0.7s infinite;
+    color: var(--accent);
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Button Container */
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Secondary CTA Button (View Resume) */
+.secondary-cta {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.secondary-cta:hover {
+    background: var(--accent);
+    color: var(--dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(110, 231, 183, 0.4);
+}
+
+/* Download CTA Button */
+.download-cta {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.download-cta:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(5, 150, 105, 0.4);
+}
+
+/* Hobbies Section */
+.hobby-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.hobby-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(5, 150, 105, 0.1);
+    text-align: center;
+    border: 2px solid transparent;
+    transition: transform 0.3s, border-color 0.3s;
+    min-width: 200px;
+    width: 250px;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+
+.hobby-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hobby-card h3 {
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.hobby-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+    .secondary-cta {
+        margin-left: 0;
+        margin-top: 1rem;
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Back to Top Button */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#backToTop:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-5px);
+}
+
+/* Why Hire Me Section */
+.why-hire-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.why-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(5, 150, 105, 0.08);
+    /* Lighter shadow */
+    text-align: center;
+    border: 1px solid rgba(5, 150, 105, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(5, 150, 105, 0.15);
+    border-color: var(--accent);
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: var(--light);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.why-card h3 {
+    color: var(--dark);
+    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+}
+
+.why-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
