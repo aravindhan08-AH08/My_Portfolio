@@ -21,6 +21,11 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
   </nav>
 
@@ -46,7 +51,7 @@
     </div>
   </section>
 
-  <section id="about">
+  <section id="about" class="reveal">
     <h2 class="section-title">About Me</h2>
     <div class="about-content">
       <div class="about-photo">
@@ -71,7 +76,7 @@
     </div>
   </section>
 
-  <section id="skills">
+  <section id="skills" class="reveal">
     <h2 class="section-title">My Skills</h2>
     <div class="skills-grid">
       <div class="skill-card">
@@ -111,7 +116,7 @@
     </div>
   </section>
 
-  <section id="hobbies">
+  <section id="hobbies" class="reveal">
     <h2 class="section-title">Hobbies & Interests</h2>
     <div class="hobby-grid">
       <div class="hobby-card">
@@ -137,7 +142,7 @@
     </div>
   </section>
 
-  <section id="why-hire-me">
+  <section id="why-hire-me" class="reveal">
     <h2 class="section-title">Why Hire Me?</h2>
     <div class="why-hire-grid">
       <div class="why-card">
@@ -159,7 +164,7 @@
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="reveal">
     <h2 class="section-title">My Projects</h2>
     <h3 class="tech-projects-title">Tech Projects</h3>
     <div class="projects-grid">
@@ -259,7 +264,7 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="reveal">
     <h2 class="section-title">Contact Me</h2>
     <div class="contact-content">
       <p>
@@ -346,6 +351,37 @@
         behavior: 'smooth'
       });
     });
+
+    // Scroll Reveal Animation Logic
+    function reveal() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+    // Trigger once on load to show any elements already in view
+    // Mobile Menu Toggle Logic
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    mobileMenu.addEventListener("click", function () {
+      mobileMenu.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      navLinks.classList.remove("active");
+    }));
   </script>
 </body>
 
