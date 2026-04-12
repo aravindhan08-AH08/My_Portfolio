@@ -4,23 +4,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="https://api.iconify.design/material-symbols:contacts-product.svg" />
+
+  <!-- Page Title & Browser Tab Icon -->
+  <link rel="icon" type="image/svg+xml" href="https://api.iconify.design/material-symbols:contacts-product.svg" />
   <title>Aravindhan M V - Portfolio</title>
+
+  <!-- Google Fonts: Syne (headings) + DM Sans (body) + Playfair Display (hero greeting) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@700;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Iconify CDN: gives us icons for every skill tag (html, css, python, etc.) -->
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <!-- Our custom stylesheet -->
   <link rel="stylesheet" href="./pages/style.css" />
 </head>
 
 <body>
-  <div class="bg-animation" id="bgAnimation"></div>
-  <nav>
+
+  <!-- =============================================
+       ANIMATED BACKGROUND: floating glowing blobs
+       These are purely decorative CSS animations
+  ============================================= -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- =============================================
+       NAVIGATION BAR
+       Fixed at top, smooth scroll links to each section
+  ============================================= -->
+  <nav id="navbar">
     <div class="nav-container">
-      <div class="logo">Aravindhan M V</div>
-      <ul class="nav-links">
+      <!-- Logo / Name -->
+      <div class="logo">
+        <span class="logo-dot"></span>
+        Aravindhan<span class="logo-accent">.</span>
+      </div>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <!-- Hire Me button (shown in navbar on desktop) -->
+      <a href="#contact" class="nav-hire-btn">Hire Me</a>
+
+      <!-- Hamburger menu icon (shown only on mobile) -->
       <div class="menu-toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -29,95 +66,274 @@
     </div>
   </nav>
 
+  <!-- =============================================
+       HERO SECTION
+       Full-screen intro with profile photo, name,
+       typewriter effect, and CTA buttons
+  ============================================= -->
   <section id="home">
     <div class="hero-content">
+
+      <!-- Left: Text + Buttons -->
       <div class="hero-text">
-        <h1>Hi, I'm Aravindhan M V</h1>
-        <h2>I am <span class="typing-text"></span></h2>
-        <p>
-          I'm passionate about building clean and functional web applications.
-          I work with HTML, CSS, JavaScript, Python, and FastAPI, and I enjoy
-          learning by building real-world projects to grow my career in tech.
+
+        <!-- Small badge above name -->
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          Available for Internship / Fresher Role
+        </div>
+
+        <h1>
+          Hey There! 👋<br />
+          <span class="hero-name">I'm Aravindhan M V</span>
+        </h1>
+
+        <!-- Typewriter text changes automatically using JS below -->
+        <h2 class="hero-subtitle">
+          I am a <span class="typing-text"></span>
+        </h2>
+
+        <p class="hero-desc">
+          From Paramakudi to the web — self-taught, always building.
+          I craft clean frontend & solid backends using HTML, CSS, JS, React, Python & FastAPI.
+          I don't wait to be ready — I build my way there.
         </p>
+
+        <!-- Two call-to-action buttons -->
         <div class="cta-buttons">
-          <a href="#contact" class="cta-button">Contact Me</a>
-          <a href="./assets/Aravindhan_Resume.pdf" target="_blank" class="cta-button secondary-cta"
-            download="Aravindhan_Resume_CV">Download Resume</a>
+          <a href="#contact" class="btn btn-primary">
+            <iconify-icon icon="mdi:email-fast-outline"></iconify-icon>
+            Contact Me
+          </a>
+          <a href="./assets/Aravindhan_Resume.pdf" target="_blank" download="Aravindhan_Resume_CV"
+            class="btn btn-outline">
+            <iconify-icon icon="mdi:download-outline"></iconify-icon>
+            Download Resume
+          </a>
+        </div>
+
+        <!-- Quick stat chips below the buttons -->
+        <div class="hero-stats">
+          <div class="stat-chip">
+            <iconify-icon icon="mdi:code-braces"></iconify-icon>
+            3+ Projects
+          </div>
+          <div class="stat-chip">
+            <iconify-icon icon="mdi:star-outline"></iconify-icon>
+            Full Stack Dev
+          </div>
+          <div class="stat-chip">
+            <iconify-icon icon="mdi:map-marker-outline"></iconify-icon>
+            Paramakudi, TN
+          </div>
         </div>
       </div>
+
+      <!-- Right: Profile Photo with decorative ring -->
       <div class="hero-image">
-        <img src="./assets/Aravindhan_photo.jpeg" alt="Profile Picture" class="profile-pic" />
+        <div class="photo-wrapper">
+          <!-- Spinning dashed ring around photo -->
+          <div class="photo-ring"></div>
+          <img src="./assets/Aravindhan_photo.jpeg" alt="Aravindhan M V" class="profile-pic" />
+          <!-- Badge 1: "Full Stack" shown bottom-left of photo -->
+          <div class="photo-badge badge-left">
+            <iconify-icon icon="mdi:check-decagram"></iconify-icon>
+            Full Stack
+          </div>
+
+          <!-- Badge 2: "Frontend" shown top-right of photo -->
+          <div class="photo-badge badge-right">
+            <iconify-icon icon="mdi:palette-outline"></iconify-icon>
+            Frontend
+          </div>
+        </div>
       </div>
+
+    </div>
+
+    <!-- Scroll down indicator -->
+    <div class="scroll-hint">
+      <iconify-icon icon="mdi:chevron-double-down"></iconify-icon>
+      Scroll Down
     </div>
   </section>
 
+  <!-- =============================================
+       ABOUT SECTION
+       Short bio + passport photo side by side
+  ============================================= -->
   <section id="about" class="reveal">
-    <h2 class="section-title">About Me</h2>
+    <div class="section-header">
+      <span class="section-label">Who Am I</span>
+      <h2 class="section-title">About Me</h2>
+    </div>
+
     <div class="about-content">
+
+      <!-- Left: Photo -->
       <div class="about-photo">
-        <img src="./assets/Aravindh_passport.jpeg" alt="Aravindhan M V" class="about-pic" />
+        <div class="about-photo-frame">
+          <img src="./assets/Aravindh_passport.jpeg" alt="Aravindhan M V" class="about-pic" />
+          <!-- Decorative corner accent -->
+          <div class="photo-corner tl"></div>
+          <div class="photo-corner br"></div>
+        </div>
       </div>
+
+      <!-- Right: Bio text + highlights -->
       <div class="about-text">
         <p>
-          My name is Aravindhan M V, I am from Paramakudi in Ramanathapuram. I
-          have completed my 12th standard in 2025. I am interested in starting
-          my career in the IT industry. I have a strong interest in working on
-          real-world projects and gaining practical experience in web
-          development.
+          My name is <strong>Aravindhan M V</strong>. I'm from Paramakudi, Ramanathapuram.
+          I completed my 12th standard in 2025 and I'm eager to start my career
+          in the IT industry. I have a strong interest in working on real-world
+          projects and gaining practical experience in web development.
         </p>
         <br />
         <p>
           I have built a user-friendly website as part of my learning journey.
           I believe in learning something new every day and continuously
-          improving my skills. I am improving my English communication skills
-          and I enjoy working as part of a team to learn and grow together.
+          improving my skills. I enjoy working as part of a team to learn and grow together.
         </p>
+
+        <!-- Highlight cards below bio -->
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <iconify-icon icon="mdi:school-outline"></iconify-icon>
+            <div>
+              <strong>Education</strong>
+              <span>12th Pass — 2025</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <iconify-icon icon="mdi:map-marker-outline"></iconify-icon>
+            <div>
+              <strong>Location</strong>
+              <span>Paramakudi, Tamil Nadu</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <iconify-icon icon="mdi:briefcase-outline"></iconify-icon>
+            <div>
+              <strong>Status</strong>
+              <span>Open to Opportunities</span>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
+  <!-- =============================================
+       SKILLS SECTION
+       4 categories, each with skill tags + icons
+       Hover on a skill tag shows your % level
+  ============================================= -->
   <section id="skills" class="reveal">
-    <h2 class="section-title">My Skills</h2>
+    <div class="section-header">
+      <span class="section-label">What I Know</span>
+      <h2 class="section-title">My Skills</h2>
+    </div>
+
     <div class="skills-grid">
+
+      <!-- Frontend Skills Card -->
       <div class="skill-card">
-        <h3>Frontend Development</h3>
+        <!-- Card header icon + title -->
+        <div class="skill-card-header">
+          <iconify-icon icon="mdi:monitor-screenshot" class="card-icon"></iconify-icon>
+          <h3>Frontend</h3>
+        </div>
         <div class="skill-items">
-          <span class="skill-tag" data-percent="50%">HTML</span>
-          <span class="skill-tag" data-percent="50%">CSS</span>
-          <span class="skill-tag" data-percent="30%">JavaScript</span>
+          <!-- Each tag shows skill name + icon. Hover = shows percent from data-percent -->
+          <span class="skill-tag" data-percent="50%">
+            <iconify-icon icon="logos:html-5"></iconify-icon> HTML
+          </span>
+          <span class="skill-tag" data-percent="50%">
+            <iconify-icon icon="logos:css-3"></iconify-icon> CSS
+          </span>
+          <span class="skill-tag" data-percent="50%">
+            <iconify-icon icon="logos:javascript"></iconify-icon> JavaScript
+          </span>
         </div>
       </div>
+
+      <!-- Backend Skills Card -->
       <div class="skill-card">
-        <h3>Backend Development</h3>
+        <div class="skill-card-header">
+          <iconify-icon icon="mdi:server-outline" class="card-icon"></iconify-icon>
+          <h3>Backend</h3>
+        </div>
         <div class="skill-items">
-          <span class="skill-tag" data-percent="65%">Python</span>
-          <span class="skill-tag" data-percent="50%">FastAPI</span>
-          <span class="skill-tag" data-percent="40%">PostgreSQL</span>
+          <span class="skill-tag" data-percent="65%">
+            <iconify-icon icon="logos:python"></iconify-icon> Python
+          </span>
+          <span class="skill-tag" data-percent="50%">
+            <iconify-icon icon="simple-icons:fastapi" style="color:#009688"></iconify-icon> FastAPI
+          </span>
+          <span class="skill-tag" data-percent="40%">
+            <iconify-icon icon="logos:postgresql"></iconify-icon> PostgreSQL
+          </span>
         </div>
       </div>
+
+      <!-- Tools Card -->
       <div class="skill-card">
-        <h3>Tools</h3>
+        <div class="skill-card-header">
+          <iconify-icon icon="mdi:tools" class="card-icon"></iconify-icon>
+          <h3>Tools</h3>
+        </div>
         <div class="skill-items">
-          <span class="skill-tag" data-percent="45%">GitHub</span>
-          <span class="skill-tag" data-percent="50%">VS Code</span>
-          <span class="skill-tag" data-percent="50%">Figma</span>
+          <span class="skill-tag" data-percent="45%">
+            <iconify-icon icon="logos:github-icon"></iconify-icon> GitHub
+          </span>
+          <span class="skill-tag" data-percent="50%">
+            <iconify-icon icon="logos:visual-studio-code"></iconify-icon> VS Code
+          </span>
+          <span class="skill-tag" data-percent="50%">
+            <iconify-icon icon="logos:figma"></iconify-icon> Figma
+          </span>
         </div>
       </div>
+
+      <!-- Other / Soft Skills Card -->
       <div class="skill-card">
-        <h3>Other Skills</h3>
+        <div class="skill-card-header">
+          <iconify-icon icon="mdi:star-circle-outline" class="card-icon"></iconify-icon>
+          <h3>Other Skills</h3>
+        </div>
         <div class="skill-items">
-          <span class="skill-tag" data-percent="60%">English Communication</span>
-          <span class="skill-tag" data-percent="50%">Video Editing</span>
-          <span class="skill-tag" data-percent="60%">Photography</span>
-          <span class="skill-tag" data-percent="50%">Presentation</span>
-          <span class="skill-tag" data-percent="65%">Teamwork</span>
+          <span class="skill-tag" data-percent="60%">
+            <iconify-icon icon="mdi:translate"></iconify-icon> English
+          </span>
+          <span class="skill-tag" data-percent="50%">
+            <iconify-icon icon="mdi:video-vintage"></iconify-icon> Video Editing
+          </span>
+          <span class="skill-tag" data-percent="60%">
+            <iconify-icon icon="mdi:camera-outline"></iconify-icon> Photography
+          </span>
+          <span class="skill-tag" data-percent="50%">
+            <iconify-icon icon="mdi:presentation"></iconify-icon> Presentation
+          </span>
+          <span class="skill-tag" data-percent="65%">
+            <iconify-icon icon="mdi:account-group-outline"></iconify-icon> Teamwork
+          </span>
         </div>
       </div>
+
     </div>
   </section>
 
+  <!-- =============================================
+       HOBBIES SECTION
+       Cards with emoji icons and short descriptions
+  ============================================= -->
   <section id="hobbies" class="reveal">
-    <h2 class="section-title">Hobbies & Interests</h2>
+    <div class="section-header">
+      <span class="section-label">Beyond Code</span>
+      <h2 class="section-title">Hobbies & Interests</h2>
+    </div>
+
     <div class="hobby-grid">
       <div class="hobby-card">
         <div class="hobby-icon">🏏</div>
@@ -127,7 +343,7 @@
       <div class="hobby-card">
         <div class="hobby-icon">🎵</div>
         <h3>Music</h3>
-        <p>Listening to Melody Songs</p>
+        <p>Melody Songs</p>
       </div>
       <div class="hobby-card">
         <div class="hobby-icon">✈️</div>
@@ -137,179 +353,270 @@
       <div class="hobby-card">
         <div class="hobby-icon">📚</div>
         <h3>Self Learning</h3>
-        <p>Exploring New Technologies</p>
+        <p>New Technologies</p>
       </div>
     </div>
   </section>
 
+  <!-- =============================================
+       WHY HIRE ME SECTION
+       4 cards showing key personality strengths
+  ============================================= -->
   <section id="why-hire-me" class="reveal">
-    <h2 class="section-title">Why Hire Me?</h2>
+    <div class="section-header">
+      <span class="section-label">My Strengths</span>
+      <h2 class="section-title">Why Hire Me?</h2>
+    </div>
+
     <div class="why-hire-grid">
       <div class="why-card">
-        <div class="icon-box">🚀</div>
+        <div class="why-icon-wrap">
+          <iconify-icon icon="mdi:lightning-bolt" class="why-icon"></iconify-icon>
+        </div>
         <h3>Quick Learner</h3>
+        <p>I pick up new tools and concepts fast and apply them to real projects.</p>
       </div>
       <div class="why-card">
-        <div class="icon-box">💡</div>
+        <div class="why-icon-wrap">
+          <iconify-icon icon="mdi:puzzle-outline" class="why-icon"></iconify-icon>
+        </div>
         <h3>Problem Solver</h3>
+        <p>I enjoy debugging and finding simple solutions to complex challenges.</p>
       </div>
       <div class="why-card">
-        <div class="icon-box">🤝</div>
+        <div class="why-icon-wrap">
+          <iconify-icon icon="mdi:handshake-outline" class="why-icon"></iconify-icon>
+        </div>
         <h3>Team Player</h3>
+        <p>I collaborate well and communicate clearly with teammates.</p>
       </div>
       <div class="why-card">
-        <div class="icon-box">✨</div>
-        <h3>Positive Personality</h3>
+        <div class="why-icon-wrap">
+          <iconify-icon icon="mdi:hammer-wrench" class="why-icon"></iconify-icon>
+        </div>
+        <h3>Builder Mindset</h3>
+        <p>50 days on one project — I don't quit until it's done.</p>
       </div>
     </div>
   </section>
 
+  <!-- =============================================
+       PROJECTS SECTION
+       Tech projects (grid cards) + Life skills (horizontal card)
+  ============================================= -->
   <section id="projects" class="reveal">
-    <h2 class="section-title">My Projects</h2>
-    <h3 class="tech-projects-title">Tech Projects</h3>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-image">
-          <img src="./assets/LEO_Resatarant.png" alt="Project Screenshot">
-        </div>
-        <div class="project-content">
-          <h3>LEO Restaurant</h3>
-          <p>
-            This is a static webpage for a restaurant menu. This project took
-            me 50 days to complete. I learnt Small Business Website Design
-            from Coursera.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-          </div>
-          <div class="project-links">
-            <a href="https://aravindhan08-ah08.github.io/LEO_static/" class="project-link">View Demo →</a>
-            <a href="https://github.com/aravindhan08-AH08/LEO_static" class="project-link">GitHub →</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-image">
-          <img src="./assets/Bachelor_life_UI.png" alt="Project Screenshot">
-        </div>
-        <div class="project-content">
-          <h3>Bachelor Life</h3>
-          <p>
-            This is a full stack web application for managing bachelor life
-            expenses and tasks. This is my first full stack web application
-            project. While building this project, I found the design part
-            challenging.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavsScript</span>
-            <span class="tech-tag">FastAPI</span>
-          </div>
-          <div class="project-links">
-            <a href="https://aravindhan08-ah08.github.io/Static_webpage/" class="project-link">View Demo →</a>
-            <a href="https://github.com/aravindhan08-AH08/Static_webpage" class="project-link">GitHub →</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-image">
-          <img src="./assets/Calculator_UI.png" alt="Project Screenshot">
-        </div>
-        <div class="project-content">
-          <h3>Calculator</h3>
-          <p>
-            This is a calculator web application project. This project is
-            built using HTML CSS and Java Script. This is my first Java Script
-            project. The calculator can perform basic arithmetic operations
-            like addition, subtraction, multiplication and division.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">Java Script</span>
-          </div>
-          <div class="project-links">
-            <a href="https://aravindhan08-ah08.github.io/Calculator/" class="project-link">View Demo →</a>
-            <a href="https://github.com/aravindhan08-AH08/Calculator" class="project-link">GitHub →</a>
-          </div>
-        </div>
-      </div>
+    <div class="section-header">
+      <span class="section-label">What I've Built</span>
+      <h2 class="section-title">My Projects</h2>
     </div>
 
-    <div class="life-skills-section" style="margin-top: 50px;">
-      <h3 class="tech-projects-title">Life Skills Projects</h3>
+    <!-- Sub-heading for tech projects -->
+    <h3 class="projects-sub-title">
+      <iconify-icon icon="mdi:code-braces-box"></iconify-icon>
+      Tech Projects
+    </h3>
+
+    <div class="projects-grid">
+
+      <!-- Project Card 1: LEO Restaurant -->
+      <div class="project-card">
+        <!-- Project screenshot image -->
+        <div class="project-image">
+          <img src="./assets/LEO_Resatarant.png" alt="LEO Restaurant Screenshot" />
+          <!-- Overlay that appears on hover -->
+          <div class="project-overlay">
+            <a href="https://aravindhan08-ah08.github.io/LEO_static/" target="_blank" class="overlay-btn">
+              <iconify-icon icon="mdi:eye-outline"></iconify-icon> Live Demo
+            </a>
+            <a href="https://github.com/aravindhan08-AH08/LEO_static" target="_blank" class="overlay-btn">
+              <iconify-icon icon="mdi:github"></iconify-icon> GitHub
+            </a>
+          </div>
+        </div>
+        <div class="project-content">
+          <!-- Project number label -->
+          <span class="project-num">01</span>
+          <h3>LEO Restaurant</h3>
+          <p>A static restaurant menu webpage. Took 50 days to build. Learnt Small Business Website Design from
+            Coursera.</p>
+          <!-- Tech stack tags -->
+          <div class="project-tech">
+            <span class="tech-tag"><iconify-icon icon="logos:html-5"></iconify-icon> HTML</span>
+            <span class="tech-tag"><iconify-icon icon="logos:css-3"></iconify-icon> CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 2: Bachelor Life -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/Bachelor_life_UI.png" alt="Bachelor Life Screenshot" />
+          <div class="project-overlay">
+            <a href="https://aravindhan08-ah08.github.io/Static_webpage/" target="_blank" class="overlay-btn">
+              <iconify-icon icon="mdi:eye-outline"></iconify-icon> Live Demo
+            </a>
+            <a href="https://github.com/aravindhan08-AH08/Static_webpage" target="_blank" class="overlay-btn">
+              <iconify-icon icon="mdi:github"></iconify-icon> GitHub
+            </a>
+          </div>
+        </div>
+        <div class="project-content">
+          <span class="project-num">02</span>
+          <h3>Bachelor Life</h3>
+          <p>My first full stack app for managing bachelor life expenses and tasks. The design was the most challenging
+            part!</p>
+          <div class="project-tech">
+            <span class="tech-tag"><iconify-icon icon="logos:html-5"></iconify-icon> HTML</span>
+            <span class="tech-tag"><iconify-icon icon="logos:css-3"></iconify-icon> CSS</span>
+            <span class="tech-tag"><iconify-icon icon="logos:javascript"></iconify-icon> JS</span>
+            <span class="tech-tag"><iconify-icon icon="simple-icons:fastapi" style="color:#009688"></iconify-icon>
+              FastAPI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 3: Calculator -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/Calculator_UI.png" alt="Calculator Screenshot" />
+          <div class="project-overlay">
+            <a href="https://aravindhan08-ah08.github.io/Calculator/" target="_blank" class="overlay-btn">
+              <iconify-icon icon="mdi:eye-outline"></iconify-icon> Live Demo
+            </a>
+            <a href="https://github.com/aravindhan08-AH08/Calculator" target="_blank" class="overlay-btn">
+              <iconify-icon icon="mdi:github"></iconify-icon> GitHub
+            </a>
+          </div>
+        </div>
+        <div class="project-content">
+          <span class="project-num">03</span>
+          <h3>Calculator</h3>
+          <p>My first JavaScript project. Performs addition, subtraction, multiplication, and division with a clean UI.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag"><iconify-icon icon="logos:html-5"></iconify-icon> HTML</span>
+            <span class="tech-tag"><iconify-icon icon="logos:css-3"></iconify-icon> CSS</span>
+            <span class="tech-tag"><iconify-icon icon="logos:javascript"></iconify-icon> JS</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Life Skills sub-section (horizontal card layout) -->
+    <div class="life-skills-section">
+      <h3 class="projects-sub-title" style="margin-top: 3rem;">
+        <iconify-icon icon="mdi:account-hard-hat-outline"></iconify-icon>
+        Life Skills Projects
+      </h3>
+
+      <!-- Horizontal card: image on left, content on right -->
       <div class="project-card horizontal-card">
         <div class="project-image">
-          <img src="./assets/Grp_Photo.jpeg" alt="7 Star AC Project" />
+          <img src="./assets/Grp_Photo.jpeg" alt="7 Star AC Team Photo" />
         </div>
         <div class="project-content">
-          <h3>7 Star AC</h3>
-          <p>A product building challenge was conducted. We participated in it and made a small AC.
-            The silver coil inside the AC becomes cool and produces cool air.
-            We made the AC using a silver coil. Our team won 4th place. From this product building
-            challenge I learnt we can achieve anything with teamwork.</p>
+          <span class="project-num">04</span>
+          <h3>7 Star AC — Product Challenge</h3>
+          <p>
+            A product building challenge where our team built a mini AC using a silver coil.
+            The coil becomes cool and produces cold air. We won 4th place!
+            This experience taught me the power of teamwork.
+          </p>
           <div class="project-tech">
-            <span class="tech-tag">Team Work</span>
+            <span class="tech-tag"><iconify-icon icon="mdi:account-group-outline"></iconify-icon> Team Work</span>
           </div>
         </div>
       </div>
     </div>
 
-    </div>
-    </div>
-
-
-    </div>
   </section>
 
+  <!-- =============================================
+       CONTACT SECTION
+       Email, phone, and social links
+  ============================================= -->
   <section id="contact" class="reveal">
-    <h2 class="section-title">Contact Me</h2>
-    <div class="contact-content">
-      <p>
-        I'm a Full Stack Developer eager to work on real-world projects and
-        grow with a passionate tech team.
+    <div class="section-header">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Contact Me</h2>
+    </div>
+
+    <!-- Contact wrapper: full-width styled box -->
+    <div class="contact-wrapper">
+
+      <p class="contact-intro">
+        I'm a Full Stack Developer eager to work on real-world projects and grow with a passionate tech team.<br />
+        <strong>Available for Fresher Role / Internship. Let's connect!</strong>
       </p>
-      <p>Available for Fresher Role / Internships. Let's connect!</p>
+
+      <!-- Direct contact: email + phone -->
       <div class="contact-info">
-        <div class="contact-item">
-          <a
-            href="mailto:aravindhanmv2008@gmail.com?subject=Regarding%20Fresher%20Developer%20Opportunity&body=Hi%20Aravindhan,%0A%0AI%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you.%0A%0AThanks">📧
-            aravindhanmv2008@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <a href="tel:+919486429127">📱 +91 94864 29127</a>
-        </div>
+        <!-- Plain mailto link — no encoding, works everywhere -->
+        <a href="mailto:aravindhanmv2008@gmail.com?subject=Regarding%20Fresher%20Developer%20Opportunity&body=Hi%20Aravindhan,%0A%0AI%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect.%0A%0AThanks"
+          class="contact-item">
+          <iconify-icon icon="mdi:email-outline"></iconify-icon>
+          aravindhanmv2008@gmail.com
+        </a>
+        <a href="tel:+919486429127" class="contact-item">
+          <iconify-icon icon="mdi:phone-outline"></iconify-icon>
+          +91 94864 29127
+        </a>
       </div>
+
+      <!-- Social links: LinkedIn, GitHub, WhatsApp -->
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/aravindhan-m-v-914170382/" target="_blank" class="social-link">LinkedIn</a>
-        <a href="https://github.com/aravindhan08-AH08" target="_blank" class="social-link">GitHub</a>
-        <a href="https://wa.me/919486429127?text=Hii%20Aravindhan%0AMy%20(Name)%20I'm%20visited%20your%20portfolio"
-          target="_blank" class="social-link">Whatsapp</a>
+        <a href="https://www.linkedin.com/in/aravindhan-m-v-914170382/" target="_blank" class="social-link">
+          <iconify-icon icon="mdi:linkedin"></iconify-icon> LinkedIn
+        </a>
+        <a href="https://github.com/aravindhan08-AH08" target="_blank" class="social-link">
+          <iconify-icon icon="mdi:github"></iconify-icon> GitHub
+        </a>
+        <a href="https://wa.me/919486429127?text=Hii%20Aravindhan%0AMy%20(Name)%20I'm%20visiting%20your%20portfolio"
+          target="_blank" class="social-link whatsapp">
+          <iconify-icon icon="mdi:whatsapp"></iconify-icon> WhatsApp
+        </a>
       </div>
+
     </div>
   </section>
 
-  <button id="backToTop" title="Go to top">↑</button>
+  <!-- Back to Top floating button (appears after scrolling down) -->
+  <button id="backToTop" title="Go to top">
+    <iconify-icon icon="mdi:arrow-up"></iconify-icon>
+  </button>
 
+  <!-- =============================================
+       FOOTER
+       Small footer with motto and copyright
+  ============================================= -->
   <footer>
     <div class="footer-content">
       <p class="footer-motto">"Actively learning • Daily practice • Real projects"</p>
-      <p class="copyright">&copy; 2026 Aravindhan M V. Designed & Built with ❤️ using HTML, CSS & JS(JavaScript).</p>
+      <p class="copyright">© 2026 Aravindhan M V — Built with HTML, CSS & JavaScript</p>
     </div>
   </footer>
 
+  <!-- =============================================
+       JAVASCRIPT SECTION
+       All interactive behaviors go here at the bottom
+       so the page loads fast before scripts run
+  ============================================= -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
-    // Typewriter Effect
+
+    // ---- TYPEWRITER EFFECT ----
+    // Changes the text after "I am a" one letter at a time
     const textElement = document.querySelector(".typing-text");
-    const texts = ["Full Stack Developer", "Problem Solver", "Application Builder"];
+    const texts = ["Full Stack Developer", "Problem Solver", "App Builder", "Quick Learner"];
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
 
     function type() {
       const currentText = texts[textIndex];
+
+      // Add or remove one character at a time
       if (isDeleting) {
         textElement.textContent = currentText.substring(0, charIndex - 1);
         charIndex--;
@@ -318,12 +625,15 @@
         charIndex++;
       }
 
-      let typeSpeed = isDeleting ? 100 : 200;
+      let typeSpeed = isDeleting ? 80 : 160;
 
+      // When full word typed: pause then start deleting
       if (!isDeleting && charIndex === currentText.length) {
         isDeleting = true;
-        typeSpeed = 2000; // Pause at end
-      } else if (isDeleting && charIndex === 0) {
+        typeSpeed = 2000;
+      }
+      // When fully deleted: move to next word
+      else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         textIndex = (textIndex + 1) % texts.length;
         typeSpeed = 500;
@@ -332,57 +642,90 @@
       setTimeout(type, typeSpeed);
     }
 
+    // Start typing when page loads
     document.addEventListener("DOMContentLoaded", type);
 
-    // Back to Top Button
-    const backToTopButton = document.getElementById("backToTop");
 
-    window.onscroll = function () {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        backToTopButton.style.display = "block";
-      } else {
-        backToTopButton.style.display = "none";
-      }
-    };
-
-    backToTopButton.addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-    // Scroll Reveal Animation Logic
+    // ---- SCROLL REVEAL ANIMATION ----
+    // Sections fade in from below as user scrolls down
     function reveal() {
       const reveals = document.querySelectorAll(".reveal");
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const revealTop = reveals[i].getBoundingClientRect().top;
-        const revealPoint = 150;
-
-        if (revealTop < windowHeight - revealPoint) {
-          reveals[i].classList.add("active");
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 120) {
+          el.classList.add("active"); // CSS handles the animation
         }
-      }
+      });
     }
 
     window.addEventListener("scroll", reveal);
-    // Trigger once on load to show any elements already in view
-    // Mobile Menu Toggle Logic
-    const mobileMenu = document.getElementById("mobile-menu");
-    const navLinks = document.querySelector(".nav-links");
+    reveal(); // Run once on load for elements already visible
 
-    mobileMenu.addEventListener("click", function () {
+
+    // ---- NAVBAR SHRINK ON SCROLL ----
+    // Navbar gets smaller/compact after user scrolls 80px
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+
+
+    // ---- BACK TO TOP BUTTON ----
+    // Appears when user scrolls down 200px, hides when back at top
+    const backToTopBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTopBtn.style.display = window.scrollY > 200 ? "flex" : "none";
+    });
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+
+    // ---- MOBILE MENU TOGGLE ----
+    // Hamburger icon opens/closes the nav links on small screens
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.getElementById("navLinks");
+
+    mobileMenu.addEventListener("click", () => {
       mobileMenu.classList.toggle("active");
       navLinks.classList.toggle("active");
     });
 
-    // Close menu when a link is clicked
-    document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
-      mobileMenu.classList.remove("active");
-      navLinks.classList.remove("active");
-    }));
+    // Close mobile menu when any nav link is clicked
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+        navLinks.classList.remove("active");
+      });
+    });
+
+
+    // ---- ACTIVE NAV LINK HIGHLIGHT ----
+    // Highlights the current section's link in the navbar as you scroll
+    const sections = document.querySelectorAll("section[id]");
+    const allNavLinks = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 120) {
+          current = section.getAttribute("id");
+        }
+      });
+      allNavLinks.forEach(a => {
+        a.classList.remove("active-link");
+        if (a.getAttribute("href") === "#" + current) {
+          a.classList.add("active-link");
+        }
+      });
+    });
+
   </script>
+
 </body>
 
 </html>
